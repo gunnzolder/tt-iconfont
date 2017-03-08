@@ -1,6 +1,6 @@
 # Twisted Tools Icon Font #
 
-The tool for automated icon font generation.
+A tool for automated icon font generation.
 
 ### Dependencies: ###
 
@@ -18,7 +18,7 @@ The tool for automated icon font generation.
 
 ### How to use ###
 
-* By default the icons are generated from the 'tt-iconfont' sketch file - addd/remove/edit them there
+* By default the icons are generated from the 'tt-iconfont' sketch file - add/remove/edit them there
 * run `gulp iconfont` from the `app` folder or `sh generate.sh` from the root
 * look for the font files in the `output` folder 
 * NOTE: please verify the symbols by opening `output/preview.html` in the browser

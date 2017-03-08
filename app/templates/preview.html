@@ -1,0 +1,50 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Twisted Tools Icon Font Preview</title>
+
+    <style>
+        @font-face {
+            font-family: "tt-icons";
+            src: url("tt-icons/tt-icons.eot");
+            src: url("tt-icons/tt-icons.eot?#iefix") format("eot"),
+            url("tt-icons/tt-icons.woff") format("woff"),
+            url("tt-icons/tt-icons.woff2") format("woff2"),
+            url("tt-icons/tt-icons.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .icon:before{
+            display: inline-block;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-family: "tt-icons";
+            content: "\2000";
+        }
+
+        <% _.each(glyphs, function(glyph) { %>.icon--<%= glyph.name %>:before{ content: "\<%= glyph.unicode[0].charCodeAt(0).toString(16) %>";}
+        <% }); %>
+
+    </style>
+    <link rel="stylesheet" href="../app/style.css"/>
+</head>
+<body>
+
+<div class="iconfont-demo">
+    <div class="iconfont-demo__font">
+        <h2 class="iconfont-demo__font__name">Twisted Tools Icons:</h2>
+        <div class="iconfont-demo__font__glyphs"><% _.each(glyphs, function(glyph) {%>
+            <span class="iconfont-demo__font__glyph icon icon-content icon--<%= glyph.name %>">
+                <input type="text" class="iconfont-demo__input" value="<%= glyph.name %>"></input>
+            </span><% }); %>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+@import "output/font_variables";
+
+@for $i from 1 through length($identifiers) {
+  $identifier: nth($identifiers, $i);
+  $character: nth($characters, $i);
+
+  .tt-icons__#{$identifier}:before {
+    content: $character;
+  }
+}

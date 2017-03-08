@@ -1,0 +1,23 @@
+{
+  "name": "twistedtools-iconfont",
+  "version": "0.1.0",
+  "description": "A tool for generating icon fonts for GEO-PAK apps",
+  "main": "index.html",
+  "directories": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "installtool": "curl -L https://raw.githubusercontent.com/cognitom/gulp-sketch/master/install-sketchtool.sh | sudo sh"
+  },
+  "repository": {},
+  "author": "Anton Parkhomenko <anton380@gmail.com>",
+  "license": "BSD",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-batch": "^1.0.5",
+    "gulp-consolidate": "^0.1.2",
+    "gulp-iconfont": "^6.0.0",
+    "gulp-sketch": "^1.0.3",
+    "lodash": "^4.5.1",
+    "yargs": "^7.0.1"
+  }
+}

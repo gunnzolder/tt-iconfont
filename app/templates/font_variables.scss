@@ -1,0 +1,5 @@
+$identifiers: (<% _.each(glyphs, function(glyph) { %>"<%= glyph.name %>" <% }); %>);
+$characters: (<% _.each(glyphs, function(glyph) { %>"\<%= glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase() %>" <% }); %>);
+
+<% _.each(glyphs, function(glyph) { %>$<%= fontName %>__<%= glyph.name %>: "\<%= glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase() %>";
+<% }); %>
